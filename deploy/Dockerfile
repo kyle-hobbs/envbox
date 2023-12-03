@@ -25,7 +25,7 @@ RUN apt-get update --quiet --option Dir::Etc::SourceParts="" && \
       ca-certificates \
       curl \
       dialog \
-      fuse \
+      fuse:arm64 \
       iproute2 \
       jq \
       kmod \
