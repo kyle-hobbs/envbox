@@ -67,7 +67,7 @@ jobs:
         run: make -j build/image/envbox
 
       - name: Tag Image
-        run: docker tag envbox ghcr.io/coder/envbox:${{ github.event.inputs.version }}
+        run: docker tag envbox ghcr.io/kyle-hobbs/envbox:${{ github.event.inputs.version }}
 
       - name: Tag and Push Commit
         run: |
@@ -75,4 +75,4 @@ jobs:
           git push --tags
 
       - name: Push Image
-        run: docker push ghcr.io/coder/envbox:${{ github.event.inputs.version }}
+        run: docker push ghcr.io/kyle-hobbs/envbox:${{ github.event.inputs.version }}
