@@ -47,7 +47,7 @@ RUN apt-get update --quiet --option Dir::Etc::SourceParts="" && \
     rm -rf /var/lib/apt/lists/*
 
 RUN wget https://downloads.nestybox.com/sysbox/releases/v0.5.2/sysbox-ce_0.5.2-0.linux_arm64.deb && \
-  echo "82474781c4ec0bea2589aa2fd6a72ca8d9b0526544212ba23bc11f340dac3cb0   sysbox-ce_0.5.2-0.linux_arm64.deb" | sha256sum --check --status && \
+  echo "82474781c4ec0bea2589aa2fd6a72ca8d9b0526544212ba23bc11f340dac3cb0 sysbox-ce_0.5.2-0.linux_arm64.deb" | sha256sum --check --status && \
   apt install -y ./sysbox-ce_0.5.2-0.linux_arm64.deb && \
   rm ./sysbox-ce_0.5.2-0.linux_arm64.deb && \
   userdel -r sysbox
